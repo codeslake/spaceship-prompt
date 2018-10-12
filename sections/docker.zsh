@@ -26,10 +26,10 @@ spaceship_docker() {
   spaceship::exists docker || return
 
   # Show Docker status only for Docker-specific folders
-  [[ -f $COMPOSE_FILE || -f Dockerfile || -f docker-compose.yml ]] || return
+  [[ -f $COMPOSE_FILE || -f Dockerfile || -f docker-compose.yml || -f /.dockerenv ]] || return
 
   # if docker daemon isn't running you'll get an error saying it can't connect
-  local docker_version=$(docker version -f "{{.Server.Version}}" 2>/dev/null)
+  local docker_version=$(docker version -f "{{.Client.Version}}" 2>/dev/null)
   [[ -z $docker_version ]] && return
 
   [[ $SPACESHIP_DOCKER_VERBOSE == false ]] && docker_version=$(echo ${docker_version} | awk -F\- '{ print $1 }')

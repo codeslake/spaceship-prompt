@@ -32,9 +32,10 @@ spaceship_git() {
 
   [[ -z $git_branch ]] && return
 
+  git_color=%B%F{"blue"}
   spaceship::section \
-    'white' \
-    "$SPACESHIP_GIT_PREFIX" \
-    "${git_branch}${git_status}" \
-    "$SPACESHIP_GIT_SUFFIX"
+    "white" \
+    "$git_color$SPACESHIP_GIT_PREFIX" \
+    "${git_branch}$git_color$SPACESHIP_GIT_SUFFIX" \
+    "${git_status}" \
 }

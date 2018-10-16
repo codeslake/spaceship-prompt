@@ -21,6 +21,9 @@ SPACESHIP_USER_SUFFIX="${SPACESHIP_USER_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX
 SPACESHIP_USER_COLOR="${SPACESHIP_USER_COLOR="yellow"}"
 SPACESHIP_USER_COLOR_ROOT="${SPACESHIP_USER_COLOR_ROOT="red"}"
 
+SPACESHIP_DEAFULT_USER_NAME=$USERNAME
+SPACESHIP_USER_NAME="${SPACESHIP_USER_NAME="$SPACESHIP_DEAFULT_USER_NAME"}"
+
 # ------------------------------------------------------------------------------
 # Section
 # ------------------------------------------------------------------------------
@@ -44,7 +47,7 @@ spaceship_user() {
     spaceship::section \
       "$user_color" \
       "$SPACESHIP_USER_PREFIX" \
-      '%n' \
+      "$SPACESHIP_USER_NAME" \
       "$SPACESHIP_USER_SUFFIX"
   fi
 }

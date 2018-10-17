@@ -16,7 +16,7 @@ The default order is:
 
 ```zsh
 SPACESHIP_PROMPT_ORDER=(
-  time          # Time stampts section
+  time          # Time stamps section
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -181,7 +181,7 @@ Git status indicators is shown only when you have dirty repository.
 | `SPACESHIP_GIT_STATUS_UNMERGED` | `=` | Indicator for unmerged changes |
 | `SPACESHIP_GIT_STATUS_AHEAD` | `⇡` | Indicator for unpushed changes (ahead of remote branch) |
 | `SPACESHIP_GIT_STATUS_BEHIND` | `⇣` | Indicator for unpulled changes (behind of remote branch) |
-| `SPACESHIP_GIT_STATUS_DIVERGED` | `⇕` | Indicator for diverged chages (diverged with remote branch) |
+| `SPACESHIP_GIT_STATUS_DIVERGED` | `⇕` | Indicator for diverged changes (diverged with remote branch) |
 
 ### Mercurial (`hg`)
 
@@ -262,6 +262,18 @@ Ruby section is shown only in directories that contain `Gemfile`, or `Rakefile`,
 | `SPACESHIP_RUBY_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after Ruby section |
 | `SPACESHIP_RUBY_SYMBOL` | `💎·` | Character to be shown before Ruby version |
 | `SPACESHIP_RUBY_COLOR` | `red` | Color of Ruby section |
+
+### Elm (`elm`)
+
+Elm section is shown only in directories that contain `elm.json` file, `elm-package.json` file, `elm-stuff` directory, or any other file with `.elm` extension.
+
+| Variable | Default | Meaning |
+| :------- | :-----: | ------- |
+| `SPACESHIP_ELM_SHOW` | `true` | Show installed Elm version |
+| `SPACESHIP_ELM_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before Elm section |
+| `SPACESHIP_ELM_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after Elm section |
+| `SPACESHIP_ELM_SYMBOL` | `🌳·` | Character to be shown before Elm version |
+| `SPACESHIP_ELM_COLOR` | `cyan` | Color of Elm section |
 
 ### Elixir (`elixir`)
 
